@@ -18,7 +18,7 @@ app.get ('/', function (req, res) {
 
 var lat = 33.5500, lng = 73.5231;
 
-app.get ('/getCoordinates', function (req, res) {
+app.get ('/g', function (req, res) {
 
     res.setHeader('Content-Type', 'application/json');
  //   lat = lat-0.0005;
