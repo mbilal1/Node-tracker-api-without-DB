@@ -23,6 +23,8 @@ app.get ('/g', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
  //   lat = lat-0.0005;
  //   lng = lng-0.0005;
+    lat = req.param('lat');
+    lng = req.param('lng');
     console.log("getCoordinates get called!");
     res.send(JSON.stringify(lat + " " + lng));
 });
