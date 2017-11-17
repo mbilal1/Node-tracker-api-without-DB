@@ -21,10 +21,12 @@ var lat = 33.5500, lng = 73.5231;
 app.get ('/g', function (req, res) {
 
     res.setHeader('Content-Type', 'application/json');
- //   lat = lat-0.0005;
- //   lng = lng-0.0005;
-    lat = req.param('lat');
-    lng = req.param('lng');
+  
+   if  ((req.param('lat') && req.param('lng')) != undefined) {
+        lat = req.param('lat');
+        lng = req.param('lng');
+    }
+
     console.log("Coordinates Recieved!");
     console.log("LAT: ", lat, "LNG: ", lng);
     res.send(JSON.stringify(lat + " " + lng));
