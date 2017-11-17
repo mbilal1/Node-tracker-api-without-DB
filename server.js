@@ -32,6 +32,15 @@ app.get ('/g', function (req, res) {
     res.send(JSON.stringify(lat + " " + lng));
 });
 
+app.get ('/p', function (req, res) {
+
+    res.setHeader('Content-Type', 'application/json');
+
+    console.log("Coordinates Recieved!");
+    console.log("LAT: ", lat, "LNG: ", lng);
+    res.send(JSON.stringify(lat + " " + lng));
+});
+
 app.get ('/recieveCoordinates', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.send("recieveCoordinates get called!");
