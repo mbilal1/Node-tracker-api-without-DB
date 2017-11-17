@@ -25,7 +25,8 @@ app.get ('/g', function (req, res) {
  //   lng = lng-0.0005;
     lat = req.param('lat');
     lng = req.param('lng');
-    console.log("getCoordinates get called!");
+    console.log("Coordinates Recieved!");
+    console.log("LAT: ", lat, "LNG: ", lng);
     res.send(JSON.stringify(lat + " " + lng));
 });
 
