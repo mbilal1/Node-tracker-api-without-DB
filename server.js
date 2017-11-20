@@ -22,10 +22,10 @@ app.get ('/g', function (req, res) {
 
     res.setHeader('Content-Type', 'application/json');
   
-  // if  ((req.param('lat') && req.param('lng')) != undefined) {
+   if  ((req.param('lat') && req.param('lng')) != undefined) {
         lat = req.param('lat');
         lng = req.param('lng');
-   // }
+    }
 
     console.log("Coordinates Recieved!");
     console.log("LAT: ", lat, "LNG: ", lng);
