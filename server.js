@@ -39,7 +39,7 @@ app.get ('/p', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
 
   //  console.log("Coordinates Requested!   ", "LAT: ", lat, "LNG: ", lng);
-    res.send(JSON.stringify(lat + " " + lng));
+    res.send(JSON.stringify(lat + " " + lng + " " + speed));
 });
 
 app.get ('/recieveCoordinates', function (req, res) {
