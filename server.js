@@ -17,6 +17,7 @@ app.get ('/', function (req, res) {
 });
 
 var lat = 33.5500, lng = 73.5231;
+var speed = 0.0000;
 
 app.get ('/g', function (req, res) {
 
@@ -25,11 +26,12 @@ app.get ('/g', function (req, res) {
    if  ((req.param('lat') && req.param('lng')) != undefined) {
         lat = req.param('lat');
         lng = req.param('lng');
+        speed = req.param('speed');
     }
 
     console.log("Coordinates Recieved!");
-    console.log("LAT: ", lat, "LNG: ", lng);
-    res.send(JSON.stringify(lat + " " + lng));
+    console.log("LAT: ", lat, "LNG: ", lng, "Speed: ", speed);
+    res.send(JSON.stringify(lat + " " + lng + " " + speed));
 });
 
 app.get ('/p', function (req, res) {
